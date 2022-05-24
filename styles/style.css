@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  background-color: black;
+}
+
+body .bulb {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: #444;
+  border-radius: 50%;
+}
+
+body .bulb::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  left: 22.5px;
+  width: 30px;
+  height: 80px;
+  background-color: #444;
+  border-top: 30px solid #720000;
+  border-radius: 10px;
+}
+
+body .bulb .bulb_span_one {
+  position: absolute;
+  top: -16px;
+  left: -4px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  -webkit-transform: rotate(342deg);
+          transform: rotate(342deg);
+  border-bottom-right-radius: 40px;
+  -webkit-box-shadow: 20px 20px 0 10px #444;
+          box-shadow: 20px 20px 0 10px #444;
+}
+
+body .bulb .bulb_span_two {
+  position: absolute;
+  top: -16px;
+  right: -2px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  -webkit-transform: rotate(14deg);
+          transform: rotate(14deg);
+  border-bottom-left-radius: 40px;
+  -webkit-box-shadow: -20px 20px 0 10px #444;
+          box-shadow: -20px 20px 0 10px #444;
+}
+
+.on {
+  background: radial-gradient(#555, #111);
+}
+
+.on::before {
+  top: 15%;
+}
+
+body.on .bulb {
+  background: #fff;
+  -webkit-box-shadow: 0 0 50px #fff, 0 0 1000px #fff, 0 0 150px #fff, 0 0 200px #fff, 0 0 250px #fff, 0 0 300px #fff, 0 0 350px #fff;
+          box-shadow: 0 0 50px #fff, 0 0 1000px #fff, 0 0 150px #fff, 0 0 200px #fff, 0 0 250px #fff, 0 0 300px #fff, 0 0 350px #fff;
+}
+
+body.on .bulb::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+}
+
+body.on .bulb::before {
+  background: #fff;
+}
+
+body.on .bulb .bulb_span_one {
+  -webkit-box-shadow: 20px 20px 0 10px #fff;
+          box-shadow: 20px 20px 0 10px #fff;
+}
+
+body.on .bulb .bulb_span_two {
+  -webkit-box-shadow: -20px 20px 0 10px #fff;
+          box-shadow: -20px 20px 0 10px #fff;
+}
+/*# sourceMappingURL=style.css.map */
